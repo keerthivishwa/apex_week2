@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apex Week 2 — Cosmic Hub</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ★ STARS BACKGROUND -->
+  <div class="stars" id="stars"></div>
+  <div class="shooting-stars"></div>
+
+  <!-- ★ NAV -->
+  <nav class="navbar">
+    <div class="nav-logo">⚡ CosmicHub</div>
+    <ul class="nav-links">
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ★ HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <p class="hero-tagline">Intermediate HTML · CSS · JavaScript</p>
+      <h1 class="hero-title">COSMIC<br/><span>HUB</span></h1>
+      <p class="hero-sub">Forms · Validation · Flexbox/Grid · Dynamic DOM</p>
+      <a href="#contact" class="btn-primary">Launch Mission ➜</a>
+    </div>
+    <div class="hero-orbit">
+      <div class="planet"></div>
+      <div class="orbit-ring">
+        <div class="satellite"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== SECTION 1 + 2 : CONTACT FORM + JS VALIDATION ===== -->
+  <section id="contact" class="section contact-section">
+    <div class="section-label">Mission 01 + 02</div>
+    <h2 class="section-title">Send a Transmission</h2>
+    <p class="section-sub">Contact form with real-time JavaScript validation</p>
+
+    <div class="form-wrapper">
+      <div class="form-glow"></div>
+      <form id="contactForm" novalidate>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="Yuri" autocomplete="off"/>
+            <span class="error" id="fnameErr"></span>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Gagarin" autocomplete="off"/>
+            <span class="error" id="lnameErr"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="cosmonaut@space.io" autocomplete="off"/>
+          <span class="error" id="emailErr"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900" autocomplete="off"/>
+          <span class="error" id="phoneErr"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject">
+            <option value="">— Choose a mission type —</option>
+            <option value="inquiry">General Inquiry</option>
+            <option value="collab">Collaboration</option>
+            <option value="support">Support Request</option>
+            <option value="other">Other</option>
+          </select>
+          <span class="error" id="subjectErr"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Transmit your message to mission control..."></textarea>
+          <span class="char-count" id="charCount">0 / 300</span>
+          <span class="error" id="messageErr"></span>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="agree" name="agree"/>
+            <span class="checkmark"></span>
+            I agree to the <a href="#">Space Terms</a>
+          </label>
+          <span class="error" id="agreeErr"></span>
+        </div>
+
+        <button type="submit" class="btn-submit">
+          <span class="btn-text">Launch Message 🚀</span>
+          <span class="btn-loading">Transmitting…</span>
+        </button>
+
+        <div class="success-msg" id="successMsg">
+          <span>✅ Transmission received! We'll respond from orbit.</span>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3 : RESPONSIVE LAYOUT (Flexbox + Grid) ===== -->
+  <section id="about" class="section layout-section">
+    <div class="section-label">Mission 03</div>
+    <h2 class="section-title">Mission Control Grid</h2>
+    <p class="section-sub">Responsive layout using Flexbox navigation + CSS Grid content areas</p>
+
+    <div class="mission-grid">
+      <div class="grid-card card-featured">
+        <div class="card-icon">🌌</div>
+        <h3>Deep Space HTML</h3>
+        <p>Semantic markup forms the skeleton of every stellar webpage — headings, forms, sections, and links that guide users through the cosmos.</p>
+        <span class="card-tag">HTML5</span>
+      </div>
+      <div class="grid-card">
+        <div class="card-icon">🎨</div>
+        <h3>CSS Nebula</h3>
+        <p>Flexbox and Grid let you sculpt beautiful responsive layouts that adapt across all screen sizes.</p>
+        <span class="card-tag">CSS3</span>
+      </div>
+      <div class="grid-card">
+        <div class="card-icon">⚡</div>
+        <h3>JS Pulsar</h3>
+        <p>JavaScript breathes life into static pages — DOM manipulation, event listeners, and dynamic content.</p>
+        <span class="card-tag">ES6+</span>
+      </div>
+      <div class="grid-card">
+        <div class="card-icon">📱</div>
+        <h3>Responsive Design</h3>
+        <p>Media queries ensure your layout looks perfect from a smartwatch to a 4K monitor.</p>
+        <span class="card-tag">Mobile-First</span>
+      </div>
+      <div class="grid-card">
+        <div class="card-icon">✅</div>
+        <h3>Form Validation</h3>
+        <p>Client-side validation catches errors before they reach the server, improving UX dramatically.</p>
+        <span class="card-tag">Validation</span>
+      </div>
+      <div class="grid-card card-wide">
+        <div class="card-icon">🚀</div>
+        <h3>Full Stack Ready</h3>
+        <p>Everything you learn here prepares you for frameworks like React, Vue, and beyond. The fundamentals are your launchpad to the stars. Master them and no framework will feel foreign.</p>
+        <span class="card-tag">Next Level</span>
+      </div>
+    </div>
+
+    <div class="stats-flex">
+      <div class="stat">
+        <span class="stat-num" data-target="4">0</span>
+        <span class="stat-label">Missions</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-target="3">0</span>
+        <span class="stat-label">Technologies</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-target="100">0</span>
+        <span class="stat-label">% Responsive</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-target="42">0</span>
+        <span class="stat-label">DOM Skills</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 4a : IMAGE GALLERY ===== -->
+  <section id="gallery" class="section gallery-section">
+    <div class="section-label">Mission 04 — Part A</div>
+    <h2 class="section-title">Space Gallery</h2>
+    <p class="section-sub">Dynamic image gallery — add &amp; remove images with DOM manipulation</p>
+
+    <div class="gallery-controls">
+      <input type="text" id="galleryUrl" placeholder="Paste image URL or leave blank for random…" />
+      <input type="text" id="galleryCaption" placeholder="Caption (optional)" />
+      <button class="btn-add" id="addImageBtn">＋ Add Image</button>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="space">Space</button>
+      <button class="filter-btn" data-filter="tech">Tech</button>
+      <button class="filter-btn" data-filter="art">Art</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Cards injected by JS -->
+    </div>
+
+    <div class="gallery-empty" id="galleryEmpty" style="display:none;">
+      🌑 The gallery is empty. Add some images above!
+    </div>
+  </section>
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>⚡ CosmicHub · Apex Week 2 · Intermediate HTML, CSS &amp; JavaScript</p>
+    <p class="footer-sub">Built with creativity, Flexbox, CSS Grid &amp; vanilla JS 🚀</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
